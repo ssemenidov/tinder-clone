@@ -2,10 +2,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: fixed;
+  margin-bottom: 10vh;
+  width: 100%;
 }
 .button {
-  height: 130px;
-  width: 130px;
+  height: 100px;
+  width: 100px;
 }
 .button__icon {
   height: 60px;

@@ -1,16 +1,36 @@
 .card {
-  position: relative;
   display: flex;
+  flex-direction: column;
   border-radius: 20px;
-  padding: 20px;
+
   width: 400px;
   max-width: 85vw;
   height: 50vh;
-  box-shadow: grey;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   background-size: cover;
   background-position: center;
 }
-
+.card__img {
+  position: relative;
+  display: flex;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+}
 .card__footer {
   align-self: flex-start;
+  width: 100%;
+  padding: 10px;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #fffeff;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.card__name {
+  font-size: 20px;
+  font-weight: 600;
 }

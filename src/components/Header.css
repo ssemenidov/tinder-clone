@@ -3,7 +3,7 @@
   justify-content: space-between;
   align-items: center;
 
-  /* margin-top: 10px; */
+  margin: 0 5vw;
   /* border-bottom: 1px solid grey; */
 }
 .header__logo {

@@ -9,13 +9,13 @@ function CardBar() {
             url:'https://upload.wikimedia.org/wikipedia/commons/8/85/Elon_Musk_Royal_Society_%28crop1%29.jpg'
         },
         {
-            name:'Joe',
-            url:'https://upload.wikimedia.org/wikipedia/commons/8/85/Elon_Musk_Royal_Society_%28crop1%29.jpg'
+            name:'Jeff Bezos',
+            url:'https://www.biography.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_1200/MTY2NzA3ODE3OTgwMzcyMjYw/jeff-bezos-andrew-harrer_bloomberg-via-getty-images.jpg'
         }
         ,
         {
-            name:'Joe',
-            url:'https://upload.wikimedia.org/wikipedia/commons/8/85/Elon_Musk_Royal_Society_%28crop1%29.jpg'
+            name:'Pavel Durov',
+            url:'https://storage.googleapis.com/telesite-prod/photos/629f9b10-c082-11ea-aab1-7bc436a38979-feed670-670-x.jpeg'
         }
     ])
     const onSwipe = (direction) => {

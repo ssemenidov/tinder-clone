@@ -6,7 +6,8 @@
 .cardbar__container {
   display: flex;
   justify-content: center;
-  margin-top: 10vh;
+  margin-top: 8vh;
+  height: 60vh;
   position: relative;
 }
 .swipe {
