@@ -3,8 +3,8 @@ import './CardBar.css'
 import Card from './Card'
 function CardBar() {
     return (
-        <div>
-            
+        <div className='cardbar'>
+            <Card></Card>
         </div>
     )
 }

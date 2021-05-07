@@ -1,0 +1,11 @@
+.card {
+  width: 450px;
+  height: 500px;
+}
+.card__img {
+  width: 450px;
+  height: 450px;
+}
+.card__footer {
+  align-self: flex-end;
+}
