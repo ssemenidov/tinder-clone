@@ -1,11 +1,10 @@
 import React from 'react'
 import './Card.css'
-function Card() {
+function Card({item}) {
     return (
-        <div className='card'>
-            <img src='../img/musk.jpg'   className='card__img'/>
+        <div className='card' style={{backgroundImage:`url("${item.url}")`}}>
             <div className="card__footer">
-                <div className="card__name">Ilon,22</div>
+                <div className="card__name">{item.name}</div>
             </div>
         </div>
     )

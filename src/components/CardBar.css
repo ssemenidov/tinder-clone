@@ -1,5 +1,14 @@
 .cardbar {
   display: flex;
-  align-items: center;
   justify-content: center;
+  position: relative;
+}
+.cardbar__container {
+  display: flex;
+  justify-content: center;
+  margin-top: 10vh;
+  position: relative;
+}
+.swipe {
+  position: absolute;
 }

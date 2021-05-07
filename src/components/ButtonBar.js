@@ -8,10 +8,10 @@ function ButtonBar() {
     return (
         <div className='buttonbar'>
             <IconButton className='button'>
-                <CloseIcon className='button__icon' style={{ color: red[500] }}/>
+                <CloseIcon className='button__icon'  style={{ color: red[500] }}/>
             </IconButton>
             <IconButton className='button'>
-                <FavoriteIcon   className='button__icon'  style={{ color: green[500] }}/>
+                <FavoriteIcon   className='button__icon'   style={{ color: green[500] }}/>
             </IconButton>
        
         </div>

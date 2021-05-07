@@ -1,11 +1,16 @@
 .card {
-  width: 450px;
-  height: 500px;
+  position: relative;
+  display: flex;
+  border-radius: 20px;
+  padding: 20px;
+  width: 400px;
+  max-width: 85vw;
+  height: 50vh;
+  box-shadow: grey;
+  background-size: cover;
+  background-position: center;
 }
-.card__img {
-  width: 450px;
-  height: 450px;
-}
+
 .card__footer {
-  align-self: flex-end;
+  align-self: flex-start;
 }
