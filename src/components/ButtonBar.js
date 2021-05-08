@@ -13,7 +13,6 @@ function ButtonBar({swipe}) {
             <IconButton onClick={()=> swipe('right')}  className='button'>
                 <FavoriteIcon    className='button__icon'   fontSize='large' style={{ color: green[500] }}/>
             </IconButton>
-       
         </div>
     )
 }

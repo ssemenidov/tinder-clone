@@ -1,12 +1,8 @@
-import React, { useContext, useMemo, useState } from 'react'
+import React, {  useMemo, useState } from 'react'
 import './CardBar.css'
 import TinderCard from 'react-tinder-card'
 import Card from './Card'
 import ButtonBar from './ButtonBar'
-import IconButton from '@material-ui/core/IconButton';
-import FavoriteIcon from '@material-ui/icons/Favorite';
-import CloseIcon from '@material-ui/icons/Close';
-
 const db=[
     {
         name:'Elon Musk',
@@ -44,24 +40,20 @@ function CardBar() {
     const onSwipe = (dir,index) => {
         alreadyRemoved.push(index)
         current-=1
-
     }
     const outOfFrame = (index) => {
-        console.log(index + ' left the screen!')
-       
         const charactersState = people
         charactersState.splice(index,1)
         setPeople(charactersState)
         console.log(people);
-      }
+    }
     const swipe =(dir) => {
         if (current>-1)
-       { console.log(current);
+        { console.log(current);
         alreadyRemoved.push(current) 
         childRefs[current].current.swipe(dir)
-
         }
-      }
+    }
     return (
         <>
         <div className='cardbar'>
@@ -82,12 +74,9 @@ function CardBar() {
             }
             </div>
             
-
         </div>
         <ButtonBar swipe={swipe}></ButtonBar>
         </>
-
-
     )
 }
 
