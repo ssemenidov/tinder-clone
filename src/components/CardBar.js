@@ -6,41 +6,53 @@ import axios from '../axios'
 import './CardBar.css'
 
 
-var db=[]
-let current=db.length-1
-console.log(db);
+let current=0
 const alreadyRemoved = []
 function CardBar() {
     const [people, setPeople] = useState([])
+    const [childRefs, setchildRefs] = useState([])
     useEffect(() => {
         async function fetchData(){
-            var req= await axios.get('/tinder/card');
+            const req= await axios.get('/tinder/card');
+             setPeople(req.data)
 
-            setPeople(req.data)
 
         }
         fetchData()
     }, [])
+    useEffect(() => {
+        async function fetchData(){
+            console.log(people);
+            const ref = await Array(people.length).fill(0).map(i => React.createRef())
+            console.log(ref);
+            setchildRefs(ref)
+
+        }
+        fetchData()
+    }, [people])
 
 
-   
 
-    const childRefs = useMemo(() => Array(db.length).fill(0).map(i => React.createRef()), [])
+
+  
     const onSwipe = (dir,index) => {
         alreadyRemoved.push(index)
-        current-=1
+        deleteCard(current)
     }
-    const outOfFrame = (index) => {
+    const deleteCard= (index) => {
         const charactersState = people
         charactersState.splice(index,1)
         setPeople(charactersState)
-        console.log(people);
     }
     const swipe =(dir) => {
+        const current=people.length-1
         if (current>-1)
-        { console.log(current);
+        {
         alreadyRemoved.push(current) 
+  
         childRefs[current].current.swipe(dir)
+        deleteCard(current)
+        
         }
     }
     return (
@@ -53,7 +65,7 @@ function CardBar() {
                 className='swipe'
                 key={index}
                 onSwipe={(dir)=>onSwipe(dir,index)} 
-                onCardLeftScreen={() => outOfFrame(index)}
+                onCardLeftScreen={() => deleteCard(index)}
                 preventSwipe={['up', 'down']}>
                 <Card 
                 item={item}
