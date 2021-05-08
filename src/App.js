@@ -1,3 +1,4 @@
+import React from 'react'
 import './App.css';
 import Header from './components/Header'
 import CardBar from './components/CardBar'
@@ -7,7 +8,7 @@ function App() {
     <div className="App">
       <Header></Header>
       <CardBar></CardBar>
-      <ButtonBar></ButtonBar>
+
      
       
     </div>
